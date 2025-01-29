@@ -1,0 +1,219 @@
+:root {
+    --primary-color: #e6b17e;
+    --accent-color: #c0932b;
+    --bg-color: rgba(28, 35, 51, 0.9);
+    --text-color: #e6e6e6;
+}
+
+body {
+    background: 
+        linear-gradient(
+            rgba(28, 35, 51, 0.85),
+            rgba(28, 35, 51, 0.85)
+        ),
+        url('../images/clock-background.jpg') center/cover no-repeat fixed;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: 'Cormorant Garamond', serif;
+    color: #e6e6e6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.container {
+    background: rgba(28, 35, 51, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        0 1px 3px rgba(0, 0, 0, 0.2),
+        inset 0 0 0 1px rgba(230, 177, 126, 0.1);
+    max-width: 600px;
+    margin: auto;
+    padding: 40px;
+    position: relative;
+}
+
+.container::before,
+.container::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(230, 177, 126, 0.3),
+        transparent
+    );
+}
+
+.container::before {
+    top: 0;
+}
+
+.container::after {
+    bottom: 0;
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--primary-color),
+        transparent
+    );
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.card {
+    background: rgba(28, 35, 51, 0.95);
+    border: 1px solid rgba(230, 177, 126, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-title {
+    font-family: 'Cinzel', serif;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.card-title:hover {
+    color: var(--accent-color);
+}
+
+.form-control {
+    background: rgba(28, 35, 51, 0.7);
+    border: 1px solid rgba(230, 177, 126, 0.2);
+    color: var(--text-color);
+    padding: 15px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+}
+
+.form-control:focus {
+    background: rgba(28, 35, 51, 0.8);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(230, 177, 126, 0.25);
+    color: var(--text-color);
+}
+
+.form-control::placeholder {
+    color: rgba(230, 177, 126, 0.5);
+    font-weight: 400;
+}
+
+.conversion-result {
+    background: rgba(28, 35, 51, 0.7);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid rgba(230, 177, 126, 0.1);
+    transition: all 0.3s ease;
+}
+
+.conversion-item {
+    margin: 12px 0;
+    font-size: 1.3rem;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.conversion-item:hover {
+    color: var(--primary-color);
+}
+
+.conversion-item:before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.form-control.is-invalid {
+    border-color: #e74c3c;
+    box-shadow: none;
+}
+
+.form-control.is-invalid:focus {
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 0.2rem rgba(231, 76, 60, 0.25);
+}
+
+.error-text {
+    color: #e74c3c;
+    font-size: 1rem;
+    margin-top: 8px;
+    text-align: center;
+    font-weight: 600;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 20px;
+        margin: 15px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .card-title {
+        font-size: 1.3rem;
+    }
+    
+    .conversion-item {
+        font-size: 1.1rem;
+    }
+
+    .form-control {
+        font-size: 1.1rem;
+        padding: 12px;
+    }
+}
