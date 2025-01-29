@@ -1,6 +1,6 @@
 # Roman Numeral Converter
 
-Hey there! This is a simple and blazing-fast converter that transforms numbers to Roman numerals and back. It works instantly and supports numbers up to 10,000!
+A sleek and elegant converter that transforms numbers to Roman numerals and back. It works instantly and supports the standard Roman numeral range (1-3999).
 
 ## Features
 
@@ -8,11 +8,8 @@ Hey there! This is a simple and blazing-fast converter that transforms numbers t
 - **Works Both Ways**: 
   - Type regular numbers (1994 → MCMXCIV)
   - Or Roman numerals (MCMXCIV → 1994)
-- **Supports Large Numbers** up to 10000, using special symbols:
-  ```
-  5000 = ↁ
-  10000 = ↂ
-  ```
+- **Standard Roman Numerals**: Supports all numbers from 1 to 3999 using traditional Roman numerals
+- **Elegant Interface**: Beautiful astronomical clock-inspired design
 
 ## Quick Start
 
@@ -41,12 +38,15 @@ Hey there! This is a simple and blazing-fast converter that transforms numbers t
    - Want to know how to write 42 in Roman numerals? Type "42"
    - Can't read "MCMXCIV"? Type it in and get 1994
 
-2. **Fun Examples:**
+2. **Valid Input Ranges:**
+   - Numbers: 1 to 3999
+   - Roman Numerals: I to MMMCMXCIX
+
+3. **Example Conversions:**
    ```
    42    ↔  XLII   (the answer to everything!)
    1994  ↔  MCMXCIV
-   5000  ↔  ↁ
-   9000  ↔  Mↂ
+   3999  ↔  MMMCMXCIX
    ```
 
 ## For Developers
