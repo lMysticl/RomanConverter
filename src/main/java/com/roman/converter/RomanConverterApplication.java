@@ -9,12 +9,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * A Spring Boot application that provides a web interface and REST API
  * for converting between Roman and Arabic numerals.
  * 
- * Features:
- * - Real-time conversion
- * - Support for numbers 1-10000
- * - Special Roman numeral symbols for large numbers
- * - Web interface with automatic conversion
- * - REST API endpoints
+ * Supports canonical Roman numerals for integers from 1 through 3999.
+ * The application provides a static web interface and REST API endpoints.
  * 
  * @see com.roman.converter.controller.RomanController
  * @see com.roman.converter.service.RomanService

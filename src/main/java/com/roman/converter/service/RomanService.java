@@ -5,9 +5,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * A friendly service that converts between Roman numerals and regular numbers!
- * 
- * Uses pre-made patterns for each digit position for instant conversion.
+ * Converts between canonical Roman numerals and integers.
+ *
+ * Uses precomputed patterns for each digit position.
  * Supports numbers 1-3999, following standard Roman numeral rules.
  * 
  * Examples:
@@ -20,16 +20,14 @@ public class RomanService {
     private final Map<Integer, String> numberToRoman;
     private final Map<String, Integer> romanToNumber;
 
-    // Ready-to-use patterns for each digit position
+    // Canonical patterns for each digit position
     private static final String[] UNITS = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
     private static final String[] TENS = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
     private static final String[] HUNDREDS = {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};
     private static final String[] THOUSANDS = {"", "M", "MM", "MMM"};
 
     /**
-     * When creating the service, we prepare all possible number combinations.
-     * This happens once at startup, so it doesn't affect conversion speed later.
-     * Think of it as preparing a cheat sheet before an exam! 
+     * Precomputes both conversion maps once during service initialization.
      */
     public RomanService() {
         numberToRoman = new HashMap<>();
