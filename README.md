@@ -20,8 +20,8 @@ A sleek and elegant converter that transforms numbers to Roman numerals and back
 2. Fire it up:
    ```bash
    # Clone the repo
-   git clone https://github.com/yourusername/roman-converter.git
-   cd roman-converter
+   git clone https://github.com/lMysticl/RomanConverter.git
+   cd RomanConverter
 
    # Run it!
    ./mvnw spring-boot:run
