@@ -20,7 +20,7 @@ public class RomanController {
     /**
      * Converts an Arabic number to Roman numerals.
      *
-     * @param number The Arabic number to convert (must be between 1 and 10000)
+     * @param number The integer to convert (must be between 1 and 3999)
      * @return ResponseEntity containing either the Roman numeral or an error message
      */
     @PostMapping("/toRoman")
